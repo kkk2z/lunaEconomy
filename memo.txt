@@ -1,0 +1,2 @@
+mvn dependency:purge-local-repository #ローカルを削除
+mvn clean install #mvnでコンパイル

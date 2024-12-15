@@ -1,0 +1,3 @@
+cmd:
+  test: "le.test"       # le-testコマンド用の権限
+  version: "le.version" # le-verコマンド用の権限

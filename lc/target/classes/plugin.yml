@@ -1,0 +1,19 @@
+name: LunaEconomy
+version: 1.0.1
+main: com.lunaeconomy.LunaEconomy
+prefix: le
+api-version: 1.20
+description: 経済プラグイン。
+author: kkk2z1
+website: https://lunaeconomu.codeberg.org
+
+load: STRATUP
+commands:
+  lunaeconomy-test:
+    description: LunaEconomyのテストコマンド
+    usage: /le-test
+    aliases: [le-test, test] 
+  le-ver :
+    description: LunaEconomyのversion確認をするコマンド。
+    usage: /le-ver
+    aliases: [le-ver, lever]

@@ -1,0 +1,41 @@
+package com.lunaeconomy;
+
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class LunaEconomy extends JavaPlugin {
+
+    @Override
+    public void onEnable() {
+        // プラグインが有効化された際に実行されるメソッド
+        getLogger().info("LunaEconomy plugin が有効になりましたとさ");
+    }
+
+    @Override
+    public void onDisable() {
+        // プラグインが無効化された際に実行されるメソッド
+        getLogger().info("LunaEconomy plugin が無効にいいい");
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        // コマンド名が "le-test" であることを確認
+        if (cmd.getName().equalsIgnoreCase("le-test")) {
+            // コマンドを実行したのがプレイヤーかコンソールかで分岐
+            if (sender instanceof Player) {
+                // プレイヤーが実行した場合
+                Player player = (Player) sender;
+                player.sendMessage("LunaEconomy のテストコマンドが実行されました！");
+            } else {
+                // プレイヤー以外（コンソールなど）が実行した場合
+                sender.sendMessage("コンソールからテストコマンドが実行されました！");
+            }
+            return true; // コマンド処理が成功したことを示す
+        }
+        return false; // 他のコマンドは無視
+    
+        
+    }
+}
